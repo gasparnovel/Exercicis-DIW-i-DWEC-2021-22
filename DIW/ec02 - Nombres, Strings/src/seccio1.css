@@ -4,16 +4,12 @@
 
 #pResults {
     position: relative;
-    left: 10px;
-    top: 20px;
     font-weight: bold;
     text-decoration: underline;
 }
 
 #iResults {
     position: relative;
-    left: 10px;
-    top: 20px;
     font-weight: bold;
     text-decoration: underline;
 }
