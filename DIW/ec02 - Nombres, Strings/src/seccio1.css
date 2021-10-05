@@ -1,0 +1,26 @@
+#dResults {
+    background-color: aqua;
+}
+
+#pResults {
+    position: relative;
+    left: 10px;
+    top: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#iResults {
+    position: relative;
+    left: 10px;
+    top: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#dInsert {
+    background-color: aqua;
+}
+
+#dButton{
+    background-color: aqua;
+}
