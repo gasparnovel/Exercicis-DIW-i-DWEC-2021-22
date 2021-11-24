@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Whatsagram</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div class="estado">
+            <div class="perfil">
+                <div class="izquierda">
+                    <img src="images/flecha.png" class="flecha">
+                    <img src="images/persona.jpeg" class="persona">
+                    <h2>Gaspar</h2>
+                    <span>online</span>
+                </div>
+                <div class="derecha">
+                    <img src="images/video.png" class="icono">
+                    <img src="images/telefono.png" class="icono">
+                    <img src="images/puntitos.png" class="icono">
+                </div>
+            </div>
+        </div>
+
+        <div id="messagingArea" class="messagingArea"></div>
+
+        <div class="textArea">
+            <button type="submit"><img class="emojiButton" onclick="verEmoji()" src="images/emoji.png"></button>
+            <textarea placeholder="" id="mensaje"></textarea>
+            <button  onclick="enviar()" type="submit"><img class="sendButton" src="images/enviar.png"></button>
+        </div>
+
+        <div id="keyboardArea" class="keyboardAreaVis">
+            <div class="keyboard-item">
+                <input type="button" value="q" id="letra" onclick="enviarLetra('q')">
+                <input type="button" value="w" id="letra" onclick="enviarLetra('w')">
+                <input type="button" value="e" id="letra" onclick="enviarLetra('e')">
+                <input type="button" value="r" id="letra" onclick="enviarLetra('r')">
+                <input type="button" value="t" id="letra" onclick="enviarLetra('t')">
+                <input type="button" value="y" id="letra" onclick="enviarLetra('y')">
+                <input type="button" value="u" id="letra" onclick="enviarLetra('u')">
+                <input type="button" value="i" id="letra" onclick="enviarLetra('i')">
+                <input type="button" value="o" id="letra" onclick="enviarLetra('o')">
+                <input type="button" value="p" id="letra" onclick="enviarLetra('p')">
+            </div>
+
+            <div class="keyboard-item">
+                <input type="button" value="a" id="letra" onclick="enviarLetra('a')">
+                <input type="button" value="s" id="letra" onclick="enviarLetra('s')">
+                <input type="button" value="d" id="letra" onclick="enviarLetra('d')">
+                <input type="button" value="f" id="letra" onclick="enviarLetra('f')">
+                <input type="button" value="g" id="letra" onclick="enviarLetra('g')">
+                <input type="button" value="h" id="letra" onclick="enviarLetra('h')">
+                <input type="button" value="j" id="letra" onclick="enviarLetra('j')">
+                <input type="button" value="k" id="letra" onclick="enviarLetra('k')">
+                <input type="button" value="l" id="letra" onclick="enviarLetra('l')">
+                <input type="button" value="ñ" id="letra" onclick="enviarLetra('ñ')">
+            </div>
+
+            <div class="keyboard-item">
+                <input type="button" value="⇪" id="mayuscula"  onclick="hacerMayuscula()">
+                <input type="button" value="z" id="letra" onclick="enviarLetra('z')">
+                <input type="button" value="x" id="letra" onclick="enviarLetra('x')">
+                <input type="button" value="c" id="letra" onclick="enviarLetra('c')">
+                <input type="button" value="v" id="letra" onclick="enviarLetra('v')">
+                <input type="button" value="b" id="letra" onclick="enviarLetra('b')">
+                <input type="button" value="n" id="letra" onclick="enviarLetra('n')">
+                <input type="button" value="m" id="letra" onclick="enviarLetra('m')">
+                <input type="button" value="←" onclick="deleteCaracterAtras('atras')">
+            </div>
+
+            <div class="keyboard-item">
+                <input type="button" value="," onclick="enviarLetra(',')">
+                <input type="button" value="→" onclick="deleteCaracterDelante('delante')">
+                <input type="button" id="espacio" value=" " onclick="enviarLetra(' ')">
+                <input type="button" value="." onclick="enviarLetra('.')">
+                <input type="button" value="C" onclick="limpiarMensaje()">
+                <input type="button" value="CE" onclick="eliminarUltimaPalabra()">
+                <input type="button" value="↵" onclick="saltoLinea()">
+            </div>
+        </div>
+
+        <div id="emojiArea" class="emojiAreaInv">
+            <input type="button" value="😀" class="letra" onclick="enviarLetra('😀')">
+            <input type="button" value="😃" class="letra" onclick="enviarLetra('😀')">
+            <input type="button" value="😄" class="letra" onclick="enviarLetra('😄')">
+            <input type="button" value="😁" class="letra" onclick="enviarLetra('😁')">
+            <input type="button" value="😆" class="letra" onclick="enviarLetra('😆')">
+            <input type="button" value="😅" class="letra" onclick="enviarLetra('😅')">
+            <input type="button" value="🤣" class="letra" onclick="enviarLetra('🤣')">
+            <input type="button" value="😂" class="letra" onclick="enviarLetra('😂')">
+            <input type="button" value="🙂" class="letra" onclick="enviarLetra('🙂')">
+            <input type="button" value="🙃" class="letra" onclick="enviarLetra('🙃')">
+            <input type="button" value="😊" class="letra" onclick="enviarLetra('😊')">
+            <input type="button" value="😇" class="letra" onclick="enviarLetra('😇')">
+            <input type="button" value="🥰" class="letra" onclick="enviarLetra('🥰')">
+            <input type="button" value="😍" class="letra" onclick="enviarLetra('😍')">
+            <input type="button" value="🤩" class="letra" onclick="enviarLetra('🤩')">
+            <input type="button" value="😘" class="letra" onclick="enviarLetra('😘')">
+            <input type="button" value="😗" class="letra" onclick="enviarLetra('😗')">
+            <input type="button" value="😚" class="letra" onclick="enviarLetra('😚')">
+            <input type="button" value="😙" class="letra" onclick="enviarLetra('😙')">
+            <input type="button" value="😋" class="letra" onclick="enviarLetra('😋')">
+            <input type="button" value="😛" class="letra" onclick="enviarLetra('😛')">
+            <input type="button" value="😜" class="letra" onclick="enviarLetra('😜')">
+            <input type="button" value="🤪" class="letra" onclick="enviarLetra('🤪')">
+            <input type="button" value="🤑" class="letra" onclick="enviarLetra('🤑')">
+            <input type="button" value="🤗" class="letra" onclick="enviarLetra('🤗')">
+            <input type="button" value="🤭" class="letra" onclick="enviarLetra('🤭')">
+            <input type="button" value="🤫" class="letra" onclick="enviarLetra('🤫')">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+:root {
+    --cTeclado: #dadada;
+    --Roboto: 'Roboto Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    grid-template-columns: repeat(5, 20%);
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    border-radius: 5px;
+}
+
+.estado {
+    display: grid;
+    overflow: auto;
+    align-items: start;
+    justify-items: end;
+    max-height: 65vh;
+}
+
+.perfil {
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.perfil .persona {
+    display: inline-block;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 4px;
+    margin-bottom: 0px;
+}
+
+.perfil .flecha {
+    display: inline-block;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    cursor: pointer;
+}
+
+.perfil h2 {
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: bottom;
+    color: #fff;
+    font-size: 20px;
+}
+
+.perfil span {
+    color: #ccc;
+    position: absolute;
+    top: 46px;
+    left: 120px;
+    font-size: 14px;
+}
+
+.derecha .icono {
+    display: inline-block;
+    width: 25px;
+    margin-left: 10px;
+
+}
+
+.perfil .izquierda {
+    flex: 1;
+}
+
+.mensaje {
+    display: grid;
+    overflow: auto;
+    align-items: start;
+    justify-items: end;
+    max-height: 65vh;
+
+}
+
+.messagingArea {
+    background-image: url(images/fondo_desktop.jpg);
+    display: flex;
+    overflow: auto;
+    align-items: flex-end;
+    height: 53vh;
+    flex-direction: column;
+    border: black solid 4px;
+
+}
+
+.messagingArea p {
+    margin: 10px;
+    background-color: rgb(6, 79, 80);
+    color: rgb(206, 220, 221);
+    border-radius: 1vh;
+    padding: 8px;
+    font-size: 20px;
+    font-family: var(--Roboto);
+}
+
+.textArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding: 10px;
+    background-color: var(--cTeclado);
+    border: black solid 4px;
+
+}
+
+.textArea #mensaje {
+    width: 60vw;
+    height: 5vh;
+    border-color: #404040;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: var(--Roboto);
+}
+
+.textArea #enviar {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+}
+
+.textArea button {
+    border-color: transparent;
+    background-color: var(--cTeclado);
+}
+
+.textArea .emojiButton {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+}
+
+.textArea .sendButton {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+}
+
+.chat-cabecera {
+    display: flex;
+    cursor: pointer;
+}
+
+.keyboardAreaInv {
+    visibility: hidden;
+    display: flex;
+    background-color: rgb(132, 140, 146);
+    flex-wrap: wrap;
+    height: 22vh;
+    align-items: center;
+    padding: 5px;
+    grid-column: 3/3;
+    grid-row: 4/5;
+}
+
+.keyboardAreaVis {
+    opacity: 100;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    height: 22vh;
+    align-items: center;
+    padding: 5px;
+    grid-column: 3/3;
+}
+
+.keyboard-item {
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    width: 80%;
+    justify-content: center;
+    background-color: black;
+}
+
+input[type="button"] {
+    width: 5vh;
+    height: 5vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.6vh;
+    color: black;
+}
+
+#espacio {
+    width: 125px;
+}
+
+.teclaMayus {
+    background-color: rgba(187, 184, 184, 0.822);
+}
+
+.keyboardMinus {
+    text-transform: lowercase;
+}
+
+.emojiAreaInv {
+    visibility: hidden;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    height: 22vh;
+    align-items: center;
+    padding: 5px;
+    grid-column: 4/4;
+}
+
+.emojiAreaVis {
+    opacity: 100;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    height: 22vh;
+    align-items: center;
+    padding: 5px;
+    grid-column: 3/3;
+    grid-row: 4/5;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.diaNumMes {
+    opacity: 90%;
+    grid-template-columns: auto auto;
+    margin-top: 5px;
+    display: grid;
+    background-color: black;
+    justify-content: center;
+    border-radius: 20px;
+    box-sizing: content-box;
+    padding: 5px;
+    align-self: center;
+    border: solid 1px grey;
+    font-size: 12px;
+    color: grey;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media only screen and (max-width: 2000px) {
+    .estado {
+        grid-column: 3/3;
+        background-image: url(images/fondo_1600.jpg);
+    }
+
+    .messagingArea {
+        grid-column: 3/3;
+    }
+
+    .textArea {
+        grid-column: 3/3;
+    }
+
+    .keyboardAreaVis {
+        grid-column: 3/3;
+        grid-row: 4/5;
+    }
+
+    .emojiAreaInv {
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .estado {
+        grid-column: 1/6;
+    }
+
+    .messagingArea {
+        grid-column: 1/6;
+        background-image: url(images/fondo_1024.jpg);
+    }
+
+    .textArea {
+        grid-column: 1/6;
+    }
+
+    .keyboardAreaVis {
+        grid-column: 1/6;
+    }
+
+    .emojiAreaInv {
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+
+    .emojiAreaVis {
+        grid-column: 1/6;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .estado {
+        grid-column: 1/6;
+    }
+
+    .messagingArea {
+        grid-column: 1/6;
+        background-image: url(images/fondo_411.jpg);
+    }
+
+    .textArea {
+        grid-column: 1/6;
+    }
+
+    .keyboardAreaVis {
+        grid-column: 1/6;
+    }
+
+    .emojiAreaInv {
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+
+    .emojiAreaVis {
+        grid-column: 1/6;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .estado {
+        grid-column: 1/6;
+    }
+
+    .messagingArea {
+        grid-column: 1/6;
+        background-image: url(images/fondo_movil.jpg);
+    }
+
+    .textArea {
+        grid-column: 1/6;
+    }
+
+    .keyboardAreaVis {
+        grid-column: 1/6;
+    }
+
+    .emojiAreaInv {
+        grid-column: 1/6;
+        grid-row: 4/5;
+    }
+
+    .emojiAreaVis {
+        grid-column: 1/6;
+    }
+}
